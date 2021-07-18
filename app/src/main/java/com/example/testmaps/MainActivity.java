@@ -40,12 +40,13 @@ public class MainActivity extends AppCompatActivity {
             // Evento onItemClick() disparado quando um item é clicado em RadTreeList
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                // Será descrita uma operação que adicionará valores e passará para outra Activity
+                // intent utilizada para passar valores para outras activity
                 Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                // método putExtra() da classe intent fará o armazenamento das informações para serem passadas para a activity 
                 intent.putExtra("Nome",arraylista.get(position).getNome());
                 intent.putExtra("Latitude",arraylista.get(position).getLatitude());
                 intent.putExtra("Longitude",arraylista.get(position).getLongitude());
-                startActivity(intent);
+                startActivity(intent); // Realiza a chamada da activity informada no intent
             }
         });
     }
