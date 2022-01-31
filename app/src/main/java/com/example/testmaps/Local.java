@@ -1,7 +1,7 @@
 package com.example.testmaps;
 // Classe Local
 public class Local {
-	// Atributos
+    // Atributos
     private String nome;
     private double latitude, longitude;
 
